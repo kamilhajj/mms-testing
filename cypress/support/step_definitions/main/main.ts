@@ -206,11 +206,11 @@ Then('I open the side bar and click on Countries', () =>{
    
  });
 
-    Then('I open the side bar and click on Service Types', () =>{
+    // Then('I open the side bar and click on Service Types', () =>{
 
-        cy.get('button.filament-sidebar-open-button').click();
-        cy.contains('Analytics').click();
-        });
+    //     cy.get('button.filament-sidebar-open-button').click();
+    //     cy.contains('Analytics').click();
+    //     });
 
     //  Then('I click on New service type and fill the form', () =>{
     //     cy.contains('New service type').click();
@@ -218,110 +218,110 @@ Then('I open the side bar and click on Countries', () =>{
     //     cy.contains('button', 'Create').click();
     //  });
 
-    //  Then('I open the side bar and click on Stock Brands', () =>{
-    //     cy.get('button.filament-sidebar-open-button').click();
-    //     cy.contains('Stock Brands').click();
-    //     });
+     Then('I open the side bar and click on Stock Brands', () =>{
+        cy.get('button.filament-sidebar-open-button').click();
+        cy.contains('Stock Brands').click();
+        });
 
-    //     Then('I click on New stock brand and fill the form', () =>{
-    //         cy.contains('New stock brand').click();
-    //         cy.contains('Name').click().type('Kamil 5');
+        Then('I click on New stock brand and fill the form', () =>{
+            cy.contains('New stock brand').click();
+            cy.contains('Name').click().type('Kamil 5');
 
-    //         cy.get('button[dusk="filament.forms.data.created_at.open"]')
-    //         cy.window().then(win => {
+            cy.get('button[dusk="filament.forms.data.created_at.open"]')
+            cy.window().then(win => {
           
-    //           const expectedDate = new win.Date('August 16, 2023 05:02:09');
-    //           const month = expectedDate.toLocaleString('default', { month: 'long' });
-    //           const day = expectedDate.getDate();
-    //           const year = expectedDate.getFullYear();
-    //           const hours = expectedDate.getHours();
-    //           const minutes = expectedDate.getMinutes();
-    //           const seconds = expectedDate.getSeconds();
-    //           const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
-    //           expect(formattedDate).to.eq('August 16, 2023 5:2:9');
-    //         });
+              const expectedDate = new win.Date('August 16, 2023 05:02:09');
+              const month = expectedDate.toLocaleString('default', { month: 'long' });
+              const day = expectedDate.getDate();
+              const year = expectedDate.getFullYear();
+              const hours = expectedDate.getHours();
+              const minutes = expectedDate.getMinutes();
+              const seconds = expectedDate.getSeconds();
+              const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+              expect(formattedDate).to.eq('August 16, 2023 5:2:9');
+            });
 
-    //         cy.get('button[dusk="filament.forms.data.updated_at.open"]')
-    //         cy.window().then(win => {
+            cy.get('button[dusk="filament.forms.data.updated_at.open"]')
+            cy.window().then(win => {
           
-    //           const expectedDate = new win.Date('August 16, 2023 05:02:09');
-    //           const month = expectedDate.toLocaleString('default', { month: 'long' });
-    //           const day = expectedDate.getDate();
-    //           const year = expectedDate.getFullYear();
-    //           const hours = expectedDate.getHours();
-    //           const minutes = expectedDate.getMinutes();
-    //           const seconds = expectedDate.getSeconds();
-    //           const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
-    //           expect(formattedDate).to.eq('August 16, 2023 5:2:9');
-    //         });
-    //         cy.contains('button', 'Create').click();
-    //      });
+              const expectedDate = new win.Date('August 16, 2023 05:02:09');
+              const month = expectedDate.toLocaleString('default', { month: 'long' });
+              const day = expectedDate.getDate();
+              const year = expectedDate.getFullYear();
+              const hours = expectedDate.getHours();
+              const minutes = expectedDate.getMinutes();
+              const seconds = expectedDate.getSeconds();
+              const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+              expect(formattedDate).to.eq('August 16, 2023 5:2:9');
+            });
+            cy.contains('button', 'Create').click();
+         });
 
-    //      Then('I open the side bar and click on Stock Types', () =>{
-    //         cy.get('button.filament-sidebar-open-button').click();
-    //         cy.contains('Stock Types').click();
-    //         });
+         Then('I open the side bar and click on Stock Types', () =>{
+            cy.get('button.filament-sidebar-open-button').click();
+            cy.contains('Stock Types').click();
+            });
 
 
-    //      Then('I click on New stock type and fill the form', () =>{
-    //         cy.contains('New stock type').click();
-    //          cy.contains('Name').click().type('Kamil service 5');
+         Then('I click on New stock type and fill the form', () =>{
+            cy.contains('New stock type').click();
+             cy.contains('Name').click().type('Kamil service 5');
     
-    //         cy.get('button[dusk="filament.forms.data.created_at.open"]')
-    //             cy.window().then(win => {
+            cy.get('button[dusk="filament.forms.data.created_at.open"]')
+                cy.window().then(win => {
               
-    //               const expectedDate = new win.Date('August 16, 2023 05:02:09');
-    //               const month = expectedDate.toLocaleString('default', { month: 'long' });
-    //               const day = expectedDate.getDate();
-    //               const year = expectedDate.getFullYear();
-    //               const hours = expectedDate.getHours();
-    //               const minutes = expectedDate.getMinutes();
-    //               const seconds = expectedDate.getSeconds();
-    //               const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
-    //               expect(formattedDate).to.eq('August 16, 2023 5:2:9');
-    //             });
+                  const expectedDate = new win.Date('August 16, 2023 05:02:09');
+                  const month = expectedDate.toLocaleString('default', { month: 'long' });
+                  const day = expectedDate.getDate();
+                  const year = expectedDate.getFullYear();
+                  const hours = expectedDate.getHours();
+                  const minutes = expectedDate.getMinutes();
+                  const seconds = expectedDate.getSeconds();
+                  const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+                  expect(formattedDate).to.eq('August 16, 2023 5:2:9');
+                });
     
-    //             cy.get('button[dusk="filament.forms.data.updated_at.open"]')
-    //             cy.window().then(win => {
+                cy.get('button[dusk="filament.forms.data.updated_at.open"]')
+                cy.window().then(win => {
               
-    //               const expectedDate = new win.Date('August 16, 2023 05:02:09');
-    //               const month = expectedDate.toLocaleString('default', { month: 'long' });
-    //               const day = expectedDate.getDate();
-    //               const year = expectedDate.getFullYear();
-    //               const hours = expectedDate.getHours();
-    //               const minutes = expectedDate.getMinutes();
-    //               const seconds = expectedDate.getSeconds();
-    //               const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
-    //               expect(formattedDate).to.eq('August 16, 2023 5:2:9');
-    //             });
-    //             cy.contains('button', 'Create').click();
-    //          });
+                  const expectedDate = new win.Date('August 16, 2023 05:02:09');
+                  const month = expectedDate.toLocaleString('default', { month: 'long' });
+                  const day = expectedDate.getDate();
+                  const year = expectedDate.getFullYear();
+                  const hours = expectedDate.getHours();
+                  const minutes = expectedDate.getMinutes();
+                  const seconds = expectedDate.getSeconds();
+                  const formattedDate = `${month} ${day}, ${year} ${hours}:${minutes}:${seconds}`;
+                  expect(formattedDate).to.eq('August 16, 2023 5:2:9');
+                });
+                cy.contains('button', 'Create').click();
+             });
 
 
-    //          Then('I open the side bar and click on Permissions', () =>{
-    //             cy.get('button.filament-sidebar-open-button').click();
-    //             cy.contains('Permissions').click();
-    //             });
+             Then('I open the side bar and click on Permissions', () =>{
+                cy.get('button.filament-sidebar-open-button').click();
+                cy.contains('Permissions').click();
+                });
 
              
-    //          Then('I click on New permission and fill the form', () =>{
-    //              cy.contains('Name').type('kamil permisiion');
-    //              cy.contains('button', 'Create').click();
-    //          });
+             Then('I click on New permission and fill the form', () =>{
+                 cy.contains('Name').type('kamil permisiion');
+                 cy.contains('button', 'Create').click();
+             });
 
-    //          Then('I open the side bar and click on Roles', () =>{
-    //             cy.get('button.filament-sidebar-open-button').click();
-    //             cy.contains('Roles').click();
-    //             });
+             Then('I open the side bar and click on Roles', () =>{
+                cy.get('button.filament-sidebar-open-button').click();
+                cy.contains('Roles').click();
+                });
 
-    //             Then('I click on New role and fill the form', () =>{
-    //              cy.contains('New role').click();
-    //              cy.contains('Name').click().type('nurse');
-    //              cy.get('#data\\.permission_id')
-    //              .as('permissionSelect');             
-    //              cy.get('@permissionSelect')
-    //              .type('appointment.view'); 
-    //              cy.get('@permissionSelect')
-    //              .type('{enter}'); 
-    //              cy.get('@permissionSelect').should('contain', 'appointment.view');
-    //             });
+                Then('I click on New role and fill the form', () =>{
+                 cy.contains('New role').click();
+                 cy.contains('Name').click().type('nurse');
+                 cy.get('#data\\.permission_id')
+                 .as('permissionSelect');             
+                 cy.get('@permissionSelect')
+                 .type('appointment.view'); 
+                 cy.get('@permissionSelect')
+                 .type('{enter}'); 
+                 cy.get('@permissionSelect').should('contain', 'appointment.view');
+                });

@@ -13,4 +13,12 @@ And I click on New country and fill the form
 And I open the side bar and click on Locations
 And I click on New location and fill the form
 And I open the side bar and click on Service Types
-#
+And I click on New service type and fill the form
+And I open the side bar and click on Stock Brands
+And I click on New stock brand and fill the form
+And I open the side bar and click on Stock Types
+And I click on New stock type and fill the form
+And I open the side bar and click on Permissions
+And I click on New permission and fill the form
+And I open the side bar and click on Roles
+And I click on New role and fill the form
