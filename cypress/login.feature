@@ -2,7 +2,7 @@ Feature: Login
 
 Scenario: Valid Login
 
-Given I am on the "Login" page
-When I fill the "loginForm" form
-And I click the "SignIn" button
-Then I should be redirected to the "Analytics" page
+Given the user is on the "Login" page
+When the user fill the "loginForm" form
+And the user click on the "SignIn" button
+Then the user should be redirected to the "Analytics" page
