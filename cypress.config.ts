@@ -13,7 +13,7 @@ export default defineConfig({
     PASSWORD: process.env.PASSWORD || 'your_default_password',
   },
   e2e: {
-    specPattern: "**/*.feature",
+    specPattern: "integration/**/*.feature", // Adjusted specPattern
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
