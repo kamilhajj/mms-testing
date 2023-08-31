@@ -1,6 +1,6 @@
-export const ROUTES = {
-    login: '/login', 
-    fillLoginForm: '/fill-login-form',
-    clickSignin: '/click-signin',
-    validateAnalytics: '/validate-analytics'
+export const routes = {
+    login: '/admin/login', 
+    fillLoginForm: '/admin/login',
+    clickSignin: '/admin/login',
+    validateAnalytics: 'admin',
   }

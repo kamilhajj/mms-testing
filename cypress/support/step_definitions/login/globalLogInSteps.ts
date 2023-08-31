@@ -1,46 +1,23 @@
-import { ROUTES } from './routes';
-require('dotenv').config();
-const EMAIL = process.env.EMAIL!; 
-const PASSWORD = process.env.PASSWORD!;
-const BASE_URL = process.env.BASE_URL;
 
+import { routes } from "./routes";
 
-export function performAction(action, option) {
-
-  switch(action) {
-
-    case 'visitPage':
-      if (option === 'Login') {
-        cy.visit(ROUTES.login);
-      }
-      break;
-    
-    case 'fillForm':
-      cy.visit(ROUTES.fillLoginForm);
-    
-      if (option === 'loginForm') {
-        cy.get('#email').type(EMAIL);
-        cy.get('#password').type(PASSWORD);
-      }
-      break;
-
-    case 'clickButton':  
-      cy.visit(ROUTES.clickSignin);
-
-      if (option === 'SignIn') {
-        cy.get('#signInButton').click();
-      }
-      break;
-
-    case 'validatePage':
-      cy.visit(ROUTES.validateAnalytics);
-    
-      if (option === 'Analytics') {
-      }
-      break;
-
-  }
-
+export function LoginPage() {
+  cy.visit(Cypress.env('BASE_URL') + routes.login);
+  cy.url().should('include', routes.login);
 }
 
+export function FillsLoginForm() {
+  cy.url().should('include', routes.fillLoginForm);
+  cy.get('[dusk="filament.forms.email"]').click().type(Cypress.env('EMAIL'));
+  cy.get('[dusk="filament.forms.password"]').click().type(Cypress.env('PASSWORD'));
+}
+
+export function ClicksSignInButton() {
+  cy.url().should('include', routes.clickSignin);
+  cy.contains('Sign in').click();
+}
+
+export function AnalyticsPage() {
+  cy.url().should('include', routes.validateAnalytics);
+}
 

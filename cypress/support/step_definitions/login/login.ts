@@ -1,18 +1,11 @@
-import { When, Given,Then } from "@badeball/cypress-cucumber-preprocessor";
-import { performAction } from './globalLogInSteps';
+import { When, Given, Then } from "@badeball/cypress-cucumber-preprocessor";
+import {LoginPage, FillsLoginForm, ClicksSignInButton, AnalyticsPage} from "./globalLogInSteps";
 
-Given("the user is on the {string} page", (page) => {
-  performAction('visitPage', page);
-});
 
-When("the user fill the {string} form", (form) => {
-  performAction('fillForm', form);
-});
+Given('the user is on the "Login" page', LoginPage);
+    
+When('the user fill the "loginForm" form', FillsLoginForm);
 
-When("the user click on the {string} button", (button) => {
-  performAction('clickButton', button);  
-});
+When('the user click on the "SignIn" button', ClicksSignInButton);
 
-Then("the user should be redirected to the {string} page", (page) => {
-  performAction('validatePage', page);
-});
+Then('the user should be redirected to the "Analytics" page', AnalyticsPage);
