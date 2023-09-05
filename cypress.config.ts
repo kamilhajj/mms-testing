@@ -3,9 +3,17 @@ import createBundler from "@bahmutov/cypress-esbuild-preprocessor";
 import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
 import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild";
 
+// Load environment variables from .env
+require('dotenv').config();
+
 export default defineConfig({
+  env: {
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
+    EMAIL: process.env.EMAIL || 'your_default_email@example.com',
+    PASSWORD: process.env.PASSWORD || 'your_default_password',
+  },
   e2e: {
-    specPattern: "**/*.feature",
+    specPattern: "integration/**/*.feature", // Adjusted specPattern
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
